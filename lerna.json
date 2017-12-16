@@ -3,5 +3,11 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "message": "publish npm packages by lerna [ci skip]"
+    }
+  }
 }

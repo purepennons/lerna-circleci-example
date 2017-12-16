@@ -1,0 +1,38 @@
+{
+  "name": "lerna-circleci-example2",
+  "version": "0.1.0",
+  "private": true,
+  "files": [
+    "lib",
+    "build",
+    "css",
+    "assets"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "flow-coverage": "flow coverage",
+    "flow-start": "flow start",
+    "flow-status": "flow status",
+    "flow-stop": "flow stop",
+    "husky:precommit": "npm run lint && npm run stylelint && npm run flow-status",
+    "lib": "NODE_ENV=production babel src/react-component-node-modules --out-dir lib --copy-files",
+    "lint": "./node_modules/eslint/bin/eslint.js ./src/**/*.{js,jsx}",
+    "prepublish": "npm run build && npm run lib",
+    "start": "react-scripts start",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "stylelint": "./node_modules/stylelint/bin/stylelint.js ./src/**/*.{scss,sass}",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "dependencies": {
+    "akiya-react-component-scripts": "3.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "flow": "flow"
+}

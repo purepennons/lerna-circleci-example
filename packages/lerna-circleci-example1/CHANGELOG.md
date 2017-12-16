@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/purepennons/lerna-circleci-example/compare/lerna-circleci-example1@0.1.2...lerna-circleci-example1@0.1.3) (2017-12-16)
+
+
+### Features
+
+* modified Example1 prop again ([ab14663](https://github.com/purepennons/lerna-circleci-example/commit/ab14663))
+
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/purepennons/lerna-circleci-example/compare/lerna-circleci-example1@0.1.1...lerna-circleci-example1@0.1.2) (2017-12-16)
 

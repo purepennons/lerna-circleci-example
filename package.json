@@ -1,5 +1,12 @@
 {
-	"devDependencies": {
-		"lerna": "^2.5.1"
-	}
+  "scripts": {
+    "lerna:install": "./node_modules/lerna/bin/lerna.js bootstrap",
+    "lerna:test": "./node_modules/lerna/bin/lerna.js run test",
+    "lerna:publish": "./node_modules/lerna/bin/lerna.js publish --conventional-commits --cd-version=$LERNA_LEVEL --yes --independent",
+    "test": "npm run lerna:test",
+    "publish-all": "npm run lerna:publish"
+  },
+  "devDependencies": {
+    "lerna": "^2.5.1"
+  }
 }

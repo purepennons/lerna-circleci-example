@@ -1,0 +1,30 @@
+machine:
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    # disable create-react-app watching mode of testing
+    CI: "true"
+  node:
+    version: 8.2.0
+
+dependencies:
+  pre:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+    # - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
+  override:
+    - yarn
+    - yarn lerna:install
+  cache_directories:
+    - ~/.cache/yarn
+
+test:
+  override:
+    - yarn test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - git config --global user.email $GITHUB_EMAIL
+      - git config --global user.name $GITHUB_USER
+    # because yarn has troll
+      - npm run publish-all

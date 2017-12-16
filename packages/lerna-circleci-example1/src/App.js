@@ -16,7 +16,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div className="content">
-          <Example name="NOOOOOOOOOOOOOOOOO, I have been modified." />
+          <Example name="NOOOOOOOOOOOOOOOOO, I have been modified again." />
         </div>
       </div>
     );
